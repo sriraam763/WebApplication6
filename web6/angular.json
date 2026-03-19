@@ -24,9 +24,11 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "optimization": {
+  "fonts": {
+    "inline": false
+  }
+}
           },
           "configurations": {
             "production": {
@@ -40,6 +42,11 @@
     "type": "anyComponentStyle",
     "maximumWarning": "2kb",
     "maximumError": "4kb"
+  },
+  {
+    "type": "anyScript",
+    "maximumWarning": "500kb",
+    "maximumError": "1mb"
   }
 ],
               "outputHashing": "all"
