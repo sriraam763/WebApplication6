@@ -5,7 +5,7 @@
 namespace WebApplication6.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreat : Migration
+    public partial class Fresh : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

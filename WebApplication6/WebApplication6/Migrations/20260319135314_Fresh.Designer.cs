@@ -12,8 +12,8 @@ using WebApplication6.Data;
 namespace WebApplication6.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260319125819_AzureInit")]
-    partial class AzureInit
+    [Migration("20260319135314_Fresh")]
+    partial class Fresh
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
