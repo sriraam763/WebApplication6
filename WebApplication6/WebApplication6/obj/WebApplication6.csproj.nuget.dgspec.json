@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sriraam/RiderProjects/WebApplication6/WebApplication6/WebApplication6.csproj": {}
+    "/Users/sriraam/WebApp6/WebApplication6/WebApplication6/WebApplication6.csproj": {}
   },
   "projects": {
-    "/Users/sriraam/RiderProjects/WebApplication6/WebApplication6/WebApplication6.csproj": {
+    "/Users/sriraam/WebApp6/WebApplication6/WebApplication6/WebApplication6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sriraam/RiderProjects/WebApplication6/WebApplication6/WebApplication6.csproj",
+        "projectUniqueName": "/Users/sriraam/WebApp6/WebApplication6/WebApplication6/WebApplication6.csproj",
         "projectName": "WebApplication6",
-        "projectPath": "/Users/sriraam/RiderProjects/WebApplication6/WebApplication6/WebApplication6.csproj",
+        "projectPath": "/Users/sriraam/WebApp6/WebApplication6/WebApplication6/WebApplication6.csproj",
         "packagesPath": "/Users/sriraam/.nuget/packages/",
-        "outputPath": "/Users/sriraam/RiderProjects/WebApplication6/WebApplication6/obj/",
+        "outputPath": "/Users/sriraam/WebApp6/WebApplication6/WebApplication6/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/sriraam/.nuget/NuGet/NuGet.Config"
@@ -49,6 +49,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.23, )"
             },
