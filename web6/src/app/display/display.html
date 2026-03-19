@@ -1,0 +1,81 @@
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="logo-mark">◈</span>
+      <span class="logo-text">TASKBOARD</span>
+    </div>
+    <div class="topbar-right">
+      <span class="counter-badge">{{ task.length }} tasks</span>
+    </div>
+  </header>
+
+  <div class="content">
+    <aside class="panel-left">
+      <div class="panel-section">
+        <p class="section-label">// new task</p>
+        <div class="form-group">
+          <input
+            class="text-input"
+            type="text"
+            placeholder="What needs to be done?" 
+            [(ngModel)]="newtask.name"
+            (keyup.enter)="addtask()"
+          />
+          <button class="submit-btn" (click)="addtask()">
+            <span class="btn-icon">＋</span>
+            <span>Add Task</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <p class="section-label">// progress</p>
+        <div class="progress-wrap">
+          <div class="progress-bar">
+            <div class="progress-fill"
+              [style.width.%]="0">
+            </div>
+          </div>
+          <div class="progress-stats">
+            <span class="stat"><span class="stat-num done-color">0</span> done</span>
+            <span class="stat"><span class="stat-num">{{ task.length }}</span> left</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="panel-right">
+      <div class="list-header">
+        <h2 class="list-title">All Tasks</h2>
+        <span class="divider-line"></span>
+      </div>
+
+      <div class="task-list" *ngIf="task.length > 0; else emptyState">
+        <div class="task-row" *ngFor="let t of task; let i = index" [class.is-done]="t.isDone">
+
+          <label class="custom-check">
+            <input type="checkbox" [checked]="t.isDone" (change)="t.isDone = !t.isDone" />
+            <span class="checkmark">
+              <svg viewBox="0 0 12 10" fill="none">
+                <path d="M1 5L4.5 8.5L11 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="task-info">
+            <span class="task-num">{{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}</span>
+            <span class="task-text">{{ t.taskName }}</span>
+          </div>
+
+          <span class="task-time"></span>
+        </div>
+      </div>
+
+      <ng-template #emptyState>
+        <div class="empty">No tasks yet</div>
+      </ng-template>
+
+    </main>
+  </div>
+</div>
+  
