@@ -8,7 +8,7 @@ import { todo } from './todolist';
 })
 export class Services {
   private http=inject(HttpClient);
-private apiurl = "https://webappazure6-amgkc6egdzh3e0a8.centralindia-01.azurewebsites.net/api/Tasklist";
+  private apiurl = "https://webappazure6-amgkc6egdzh3e0a8.centralindia-01.azurewebsites.net/api/Tasklist";
 
   gettask():Observable<todo[]>{
     return this.http.get<todo[]>(this.apiurl);
